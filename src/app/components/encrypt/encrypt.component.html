@@ -2,8 +2,8 @@
   <h1>{{ title }}</h1>
   <div class="encrypt-form">
     <label for="txtEncrypt">{{ labelForm }}</label>
-    <input id="txtEncrypt" type="text">
-    <button>{{ buttonText }}</button>
+    <input id="txtEncrypt" [(ngModel)]="textToEncrypt" type="text">
+    <button (click)="encrypt()">{{ buttonText }}</button>
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EncryptionService } from '../../services/encryption.service';
 
 @Component({
   selector: 'app-encrypt',
@@ -11,8 +12,14 @@ export class EncryptComponent implements OnInit {
   labelForm = "Text to encrypt";
   buttonText = "Encrypt";
 
-  constructor() { }
+  textToEncrypt = "";
 
-  ngOnInit(): void {
+  constructor(private encryptService: EncryptionService) { }
+
+  ngOnInit(): void { }
+
+  encrypt() {
+    this.encryptService.encryption(this.textToEncrypt);
+    this.textToEncrypt = "";
   }
 }

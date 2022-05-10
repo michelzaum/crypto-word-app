@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { EncryptComponent } from './components/encrypt/encrypt.component';
 import { DecryptComponent } from './components/decrypt/decrypt.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { DecryptComponent } from './components/decrypt/decrypt.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

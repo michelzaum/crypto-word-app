@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./decrypt.component.css']
 })
 export class DecryptComponent implements OnInit {
-  title = "Put the generated hash here to see the word decrypted again";
+  title = "See the word decrypted again";
   labelForm = "Hash generated";
   buttonText = "Decrypt";
 

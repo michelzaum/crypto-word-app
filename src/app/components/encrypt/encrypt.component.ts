@@ -1,3 +1,4 @@
+import { ChangeDetectionStrategy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { EncryptionService } from '../../services/encryption.service';
 
@@ -13,13 +14,15 @@ export class EncryptComponent implements OnInit {
   buttonText = "Encrypt";
 
   textToEncrypt = "";
+  textResult = "";
 
   constructor(private encryptService: EncryptionService) { }
 
   ngOnInit(): void { }
 
   encrypt() {
-    this.encryptService.encryption(this.textToEncrypt);
+    const text = this.encryptService.encryption(this.textToEncrypt);
+    this.textResult = text;
     this.textToEncrypt = "";
   }
 }

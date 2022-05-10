@@ -1,0 +1,57 @@
+.decrypt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin-left: 4rem;
+  height: 40vh;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.decrypt-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.decrypt-form label {
+  font-weight: 600;
+}
+
+.decrypt-form input {
+  height: 3rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  outline: transparent;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.decrypt-form button {
+  height: 3rem;
+  border-radius: 5px;
+  background-color: #252466;
+  color: #FAFAFA;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.decrypt-form button:hover {
+  cursor: pointer;
+  background-color: #151455;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 6rem;
+}

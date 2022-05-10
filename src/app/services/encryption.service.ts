@@ -34,7 +34,7 @@ export class EncryptionService {
 
     let encryptedText = "";
     sumOfIndexes.forEach(item => {
-      if (item > this.alphabet.length) {
+      if (item >= this.alphabet.length) {
         item = item - this.alphabet.length;
       };
       

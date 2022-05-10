@@ -8,13 +8,17 @@ import { EncryptComponent } from './components/encrypt/encrypt.component';
 import { DecryptComponent } from './components/decrypt/decrypt.component';
 
 import { FormsModule } from '@angular/forms';
+import { ResultEncryptComponent } from './components/result-encrypt/result-encrypt.component';
+import { ResultDecryptComponent } from './components/result-decrypt/result-decrypt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     EncryptComponent,
-    DecryptComponent
+    DecryptComponent,
+    ResultEncryptComponent,
+    ResultDecryptComponent
   ],
   imports: [
     BrowserModule,

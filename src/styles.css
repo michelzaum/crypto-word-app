@@ -11,3 +11,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+.result-components {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

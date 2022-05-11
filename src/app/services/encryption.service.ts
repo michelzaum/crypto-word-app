@@ -5,18 +5,19 @@ import { Injectable } from '@angular/core';
 })
 
 export class EncryptionService {
-  hash = "myhash";
-  
   alphabet = [
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
   ];
   
   constructor() { };
   
-  encryption(textToEncrypt: string): string {
-    this.hash += textToEncrypt.substring(0, textToEncrypt.length - this.hash.length);
+  encryption(value: string): string {
+    let hash = "myhash";
+    const textToEncrypt = value.replace(/\s/g, '');
 
-    const hashToArray = this.hash.split('');
+    hash += textToEncrypt.substring(0, textToEncrypt.length - hash.length);
+
+    const hashToArray = hash.split('');
     const textToArray = textToEncrypt.split('');
 
     const indexOfHashItems = hashToArray.map(hashItem => (
@@ -37,7 +38,7 @@ export class EncryptionService {
       if (item >= this.alphabet.length) {
         item = item - this.alphabet.length;
       };
-      
+
       encryptedText += this.alphabet[item];
     });
 

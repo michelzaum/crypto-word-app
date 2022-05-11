@@ -1,13 +1,9 @@
 <div class="results">
   <span>Encrypted words:</span>
   <ul>
-    <li>
-      <span>
-        {{ count }}
-      </span>
-      <span>
-        {{ word }}
-      </span>
+    <li *ngIf="count > 0">
+      <span> {{ count }}</span>
+      <span>{{ word }}</span>
     </li>
   </ul>
 </div>

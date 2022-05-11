@@ -15,6 +15,7 @@ export class EncryptComponent implements OnInit {
 
   textToEncrypt = "";
   textResult = "";
+  count = 0;
 
   constructor(private encryptService: EncryptionService) { }
 
@@ -23,6 +24,7 @@ export class EncryptComponent implements OnInit {
   encrypt() {
     const text = this.encryptService.encryption(this.textToEncrypt);
     this.textResult = text;
+    this.count++;
     this.textToEncrypt = "";
   }
 }

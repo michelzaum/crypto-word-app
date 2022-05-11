@@ -6,3 +6,13 @@ span {
 ul {
   list-style: none;
 }
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul li span {
+  font-weight: 400;
+}

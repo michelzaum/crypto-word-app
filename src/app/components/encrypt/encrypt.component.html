@@ -5,5 +5,5 @@
     <input id="txtEncrypt" [(ngModel)]="textToEncrypt" type="text">
     <button (click)="encrypt()">{{ buttonText }}</button>
   </div>
-  <app-result-encrypt [word]="textResult"></app-result-encrypt>
+  <app-result-encrypt [count]="count" [word]="textResult"></app-result-encrypt>
 </div>

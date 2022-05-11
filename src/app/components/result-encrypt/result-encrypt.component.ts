@@ -7,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class ResultEncryptComponent implements OnInit {
-  @Input() word: string = "";
-  @Input() count: number = 0;
+  @Input() data: Array<{
+    count: number,
+    textResult: string,
+  }> = [];
 
   constructor() { }
 

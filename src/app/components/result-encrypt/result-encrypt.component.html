@@ -1,9 +1,9 @@
 <div class="results">
   <span>Encrypted words:</span>
   <ul>
-    <li *ngIf="count > 0">
-      <span> {{ count }}</span>
-      <span>{{ word }}</span>
+    <li *ngFor="let item of data">
+      <span *ngIf="item.count > 0">{{ item.count }}</span>
+      <span *ngIf="item.textResult !== ''">{{ item.textResult }}</span>
     </li>
   </ul>
 </div>

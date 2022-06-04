@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-result-decrypt',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultDecryptComponent implements OnInit {
 
+  @Input() data: Array<{
+    count: number,
+    text: string
+  }> = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

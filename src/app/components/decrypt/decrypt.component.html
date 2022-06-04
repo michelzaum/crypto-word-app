@@ -2,8 +2,8 @@
   <h1>{{ title }}</h1>
   <div class="decrypt-form">
     <label for="txtDecrypt">{{ labelForm }}</label>
-    <input id="txtDecrypt" type="text">
-    <button>{{ buttonText }}</button>
+    <input id="txtDecrypt" [(ngModel)]="textToDecrypt" type="text">
+    <button (click)="decrypt()" >{{ buttonText }}</button>
   </div>
 </div>
-<app-result-decrypt></app-result-decrypt>
+<app-result-decrypt [data]="data"></app-result-decrypt>

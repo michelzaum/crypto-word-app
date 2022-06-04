@@ -1,31 +1,30 @@
 import { Injectable } from '@angular/core';
+import { alphabet } from '../utils/alphabet';
+
+import { myhash } from '../../hash';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class EncryptionService {
-  alphabet = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
-  ];
-  
   constructor() { };
   
   encryption(value: string): string {
-    let hash = "myhash";
+    let hash = myhash;
     const textToEncrypt = value.replace(/\s/g, '');
 
-    hash += textToEncrypt.substring(0, textToEncrypt.length - hash.length);
+    hash += textToEncrypt.substring(0, textToEncrypt.length - hash.toString().length);
 
-    const hashToArray = hash.split('');
+    const hashToArray = hash.toString().split('');
     const textToArray = textToEncrypt.split('');
 
-    const indexOfHashItems = hashToArray.map(hashItem => (
-      this.alphabet.indexOf(hashItem)
+    const indexOfHashItems = hashToArray.map((hashItem: string) => (
+      alphabet.indexOf(hashItem)
     ));
 
     const indexOfTextItems = textToArray.map(textItem => (
-      this.alphabet.indexOf(textItem)
+      alphabet.indexOf(textItem)
     ));
 
     const sumOfIndexes = [];
@@ -35,11 +34,11 @@ export class EncryptionService {
 
     let encryptedText = "";
     sumOfIndexes.forEach(item => {
-      if (item >= this.alphabet.length) {
-        item = item - this.alphabet.length;
+      if (item >= alphabet.length) {
+        item = item - alphabet.length;
       };
 
-      encryptedText += this.alphabet[item];
+      encryptedText += alphabet[item];
     });
 
     return encryptedText;

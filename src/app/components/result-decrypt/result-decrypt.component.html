@@ -1,5 +1,9 @@
 <div class="results">
   <span>Decrypted words:</span>
   <ul>
+    <li *ngFor="let item of data">
+      <span *ngIf="item.count > 0">{{ item.count }}</span>
+      <span *ngIf="item.text !== ''">{{ item.text }}</span>
+    </li>
   </ul>
 </div>

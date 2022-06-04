@@ -25,6 +25,9 @@ export class EncryptComponent implements OnInit {
   ngOnInit(): void { }
 
   encrypt() {
+    if (this.textToEncrypt === "")
+      return;
+      
     const text = this.encryptService.encryption(this.textToEncrypt);
     this.data.push({ textResult: text, count: this.data.length })
     this.textToEncrypt = "";

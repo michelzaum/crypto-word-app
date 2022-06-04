@@ -24,6 +24,9 @@ export class DecryptComponent implements OnInit {
   }
 
   decrypt() {
+    if (this.textToDecrypt === "")
+      return;
+      
     const decryptedText = this.decryptionService.decryption(this.textToDecrypt);
     this.data.push({ text: decryptedText, count: this.data.length });
     this.textToDecrypt = "";

@@ -14,6 +14,7 @@ export class EncryptComponent implements OnInit {
   buttonText = "Encrypt";
 
   textToEncrypt = "";
+  countCharacters = 16;
 
   data = [{
     textResult: "",
@@ -22,14 +23,31 @@ export class EncryptComponent implements OnInit {
 
   constructor(private encryptService: EncryptionService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    const input = document.getElementById('txtEncrypt');
+
+    input?.addEventListener('keydown', () => {
+        this.countCharacters = Number(input.getAttribute('ng-reflect-maxlength')) - this.textToEncrypt.length;
+    });
+  };
 
   encrypt() {
-    if (this.textToEncrypt === "")
+    if (this.textToEncrypt === "") {
       return;
+    ;}
+    
+    if (this.textToEncrypt.length < 8) {
+      alert('Please enter at least 8 characters');
+      return;
+    };
+
+    if (this.textToEncrypt.length > 16) {
+      alert('Please enter a maximum of 16 characters');
+      return;
+    };
       
     const text = this.encryptService.encryption(this.textToEncrypt);
-    this.data.push({ textResult: text, count: this.data.length })
+    this.data.push({ textResult: text, count: this.data.length });
     this.textToEncrypt = "";
-  }
+  };
 }

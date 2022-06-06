@@ -34,6 +34,16 @@ h1 {
   font-size: 1rem;
 }
 
+input:out-of-range {
+  border-color: #e05e5e;
+}
+
+.txt-aux {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
 .encrypt-form button {
   height: 3rem;
   border-radius: 5px;

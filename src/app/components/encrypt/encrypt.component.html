@@ -2,7 +2,8 @@
   <h1>{{ title }}</h1>
   <div class="encrypt-form">
     <label for="txtEncrypt">{{ labelForm }}</label>
-    <input id="txtEncrypt" [(ngModel)]="textToEncrypt" type="text">
+    <input id="txtEncrypt" minlength="8" maxlength="16" [(ngModel)]="textToEncrypt" type="text" placeholder="Min 8 and max 16 characters">
+    <span class="txt-aux">{{ countCharacters }} characters left</span>
     <button (click)="encrypt()">{{ buttonText }}</button>
   </div>
 </div>

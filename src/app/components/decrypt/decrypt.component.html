@@ -2,7 +2,7 @@
   <h1>{{ title }}</h1>
   <div class="decrypt-form">
     <label for="txtDecrypt">{{ labelForm }}</label>
-    <input id="txtDecrypt" [(ngModel)]="textToDecrypt" type="text">
+    <input id="txtDecrypt" minlength="8" maxlength="16" [(ngModel)]="textToDecrypt" type="text" placeholder="Put the hash here">
     <button (click)="decrypt()" >{{ buttonText }}</button>
   </div>
 </div>

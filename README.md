@@ -23,6 +23,6 @@ $ cd crypto-word-app
 $ npm install
 
 # Run application
-$ npm start (The application will open in a brower. If not, it can be accessed from the link http://localhost:4200/)
+$ npm start (The application will open in a browser. If not, it can be accessed from the link http://localhost:4200/)
 ```
 <p align="center">Created with ❤️ by michelzaum</span>

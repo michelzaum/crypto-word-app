@@ -7,6 +7,7 @@ import { isValidValue } from '../../utils/isValidValue';
   templateUrl: './decrypt.component.html',
   styleUrls: ['./decrypt.component.css']
 })
+
 export class DecryptComponent implements OnInit {
   title = "See the word decrypted again";
   labelForm = "Hash generated";

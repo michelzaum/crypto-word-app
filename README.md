@@ -1,27 +1,28 @@
-# CryptoWordApp
+<h1 align="center">Crypto word app 🚀️</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## About 💡️
+- This project is an application that you can use to encrypt words. The encryption happens using a merge of the concepts of [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) and [Polyalphabetic cipher](https://en.wikipedia.org/wiki/Polyalphabetic_cipher#:~:text=A%20polyalphabetic%20cipher%20is%20any,is%20a%20simplified%20special%20case.), which basically consist of encrypting words with characters substitutions.
 
-## Development server
+## How to use the application❓️
+- After filling the field with your word and encrypting it, it will appear in the list of encrypted words, as a random hash. In addition, you can see the decrypted word again. Just put the generated hash in the decryption field, which is next to the encryption field. But, there are some rules for encryption to work well.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Rules for encryption to work ⚠️
+- Only use letters (from A to Z): This is because the Ciphers used in this project, only include the alphabet. But, I'm planning to update this project to allow using more characters. Wait 👀️
+- Minimum 8 and maximum 16 characters: This will depend on the length of the hash used in the project. Among the scenarios which I tested, I faced some issues in decryption caused by words too short and too long as well. (It's a little difficcult to explain in a few words...but feel free to ask me for more details).
 
-## Code scaffolding
+## Running application locally 💻️
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+# Clone repository
+$ git clone git@github.com:michelzaum/crypto-word-app.git
 
-## Build
+# Go to the project directory
+$ cd crypto-word-app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Install the dependencies
+$ npm install
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Run application
+$ npm start (The application will open in a brower. If not, it can be accessed from the link http://localhost:4200/)
+```
+<p align="center">Created with ❤️ by michelzaum</span>

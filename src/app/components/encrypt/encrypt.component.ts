@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EncryptionService } from '../../services/encryption.service';
+import { isValidValue } from '../../utils/isValidValue';
 
 @Component({
   selector: 'app-encrypt',
@@ -33,24 +34,14 @@ export class EncryptComponent implements OnInit {
   };
 
   encrypt() {
-    if (this.textToEncrypt === "") {
-      return;
-    ;}
-    
-    if (this.textToEncrypt.length < 8) {
-      alert('Please enter at least 8 characters');
+    if (!isValidValue(this.textToEncrypt)) {
       return;
     };
 
-    if (this.textToEncrypt.length > 16) {
-      alert('Please enter a maximum of 16 characters');
-      return;
-    };
-    
     const text = this.encryptService.encryption(this.textToEncrypt);
     this.data.push({ textResult: text, count: this.data.length });
     
     this.textToEncrypt = "";
     this.countCharacters = this.inputMaxLength;
   };
-}
+};

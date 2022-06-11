@@ -1,4 +1,3 @@
-import { ChangeDetectionStrategy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { EncryptionService } from '../../services/encryption.service';
 
@@ -14,6 +13,7 @@ export class EncryptComponent implements OnInit {
   buttonText = "Encrypt";
 
   textToEncrypt = "";
+  inputMaxLength = 0;
   countCharacters = 16;
 
   data = [{
@@ -25,9 +25,10 @@ export class EncryptComponent implements OnInit {
 
   ngOnInit(): void {
     const input = document.getElementById('txtEncrypt');
+    this.inputMaxLength = Number(input?.getAttribute('ng-reflect-maxlength'));
 
-    input?.addEventListener('keydown', () => {
-        this.countCharacters = Number(input.getAttribute('ng-reflect-maxlength')) - this.textToEncrypt.length;
+    input?.addEventListener('keyup', () => {
+        this.countCharacters = this.inputMaxLength - this.textToEncrypt.length;
     });
   };
 
@@ -45,9 +46,11 @@ export class EncryptComponent implements OnInit {
       alert('Please enter a maximum of 16 characters');
       return;
     };
-      
+    
     const text = this.encryptService.encryption(this.textToEncrypt);
     this.data.push({ textResult: text, count: this.data.length });
+    
     this.textToEncrypt = "";
+    this.countCharacters = this.inputMaxLength;
   };
 }

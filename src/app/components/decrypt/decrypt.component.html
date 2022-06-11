@@ -3,6 +3,7 @@
   <div class="decrypt-form">
     <label for="txtDecrypt">{{ labelForm }}</label>
     <input id="txtDecrypt" minlength="8" maxlength="16" [(ngModel)]="textToDecrypt" type="text" placeholder="Put the hash here">
+    <span class="txt-aux">{{ countCharacters }} characters left</span>
     <button (click)="decrypt()" >{{ buttonText }}</button>
   </div>
 </div>

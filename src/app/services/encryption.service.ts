@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { alphabet } from '../utils/alphabet';
 
-import { myhash } from '../../hash';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +9,7 @@ export class EncryptionService {
   constructor() { };
   
   encryption(value: string): string {
-    let hash = myhash;
+    let hash = "ismyhash";
     const textToEncrypt = value.replace(/\s/g, '');
 
     hash += textToEncrypt.substring(0, textToEncrypt.length - hash.toString().length);

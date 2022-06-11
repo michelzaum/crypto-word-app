@@ -26,7 +26,7 @@ export class EncryptComponent implements OnInit {
 
   ngOnInit(): void {
     const input = document.getElementById('txtEncrypt');
-    this.inputMaxLength = Number(input?.getAttribute('ng-reflect-maxlength'));
+    this.inputMaxLength = Number(input?.getAttribute('maxlength'));
 
     input?.addEventListener('keyup', () => {
         this.countCharacters = this.inputMaxLength - this.textToEncrypt.length;

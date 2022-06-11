@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DecryptionService } from '../../services/decryption.service';
+import { isValidValue } from '../../utils/isValidValue';
 
 @Component({
   selector: 'app-decrypt',
@@ -12,6 +13,8 @@ export class DecryptComponent implements OnInit {
   buttonText = "Decrypt";
 
   textToDecrypt = "";
+  inputMaxLength = 0;
+  countCharacters = 16;
 
   data = [{
     text: "",
@@ -21,14 +24,23 @@ export class DecryptComponent implements OnInit {
   constructor(private decryptionService: DecryptionService) { }
 
   ngOnInit(): void {
+    const input = document.getElementById('txtDecrypt');
+    this.inputMaxLength = Number(input?.getAttribute('maxlength'));
+
+    input?.addEventListener('keyup', () => {
+        this.countCharacters = this.inputMaxLength - this.textToDecrypt.length;
+    });
   }
 
   decrypt() {
-    if (this.textToDecrypt === "")
+    if (!isValidValue(this.textToDecrypt)) {
       return;
-      
+    };
+    
     const decryptedText = this.decryptionService.decryption(this.textToDecrypt);
     this.data.push({ text: decryptedText, count: this.data.length });
+
     this.textToDecrypt = "";
+    this.countCharacters = this.inputMaxLength;
   };
 };

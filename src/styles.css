@@ -16,12 +16,6 @@ html {
   align-items: center;
 }
 
-.result-components {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .encrypt-component, .decrypt-component {
   height: 100vh;
 }

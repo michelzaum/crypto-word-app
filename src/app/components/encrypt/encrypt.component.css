@@ -55,3 +55,34 @@ h1 {
   cursor: pointer;
   background-color: #151455;
 }
+
+@media (max-width: 1024px) {
+  .encrypt-container {
+     max-width: 800px;
+     height: 50vh;
+     margin-left: 0%;
+  } 
+ }
+ 
+ @media (max-width: 925px) {
+   .encrypt-container {
+     height: 40vh;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .encrypt-container {
+     margin-left: 0%;
+     height: 45vh;
+     max-width: 800px;
+   }
+ }
+ 
+ @media (max-width: 550px) {
+   .encrypt-container {
+     height: 50vh;
+     width: 100%;
+     margin-top: 1rem;
+     padding: 0 0.5rem;
+   }
+ }

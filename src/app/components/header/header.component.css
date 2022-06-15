@@ -11,3 +11,13 @@ header span {
   font-size: 2rem;
   font-weight: 600;
 }
+
+@media (max-width: 1024px) {
+  header {
+    height: 5rem;
+  }
+
+  header span {
+    font-size: 1.5rem;
+  }
+}

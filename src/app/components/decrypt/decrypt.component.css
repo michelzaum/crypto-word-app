@@ -55,3 +55,33 @@ h1 {
   cursor: pointer;
   background-color: #151455;
 }
+
+@media (max-width: 1024px) {
+  .decrypt-container {
+    max-width: 800px;
+    height: 50vh;
+    margin-left: 0%;
+  } 
+}
+
+@media (max-width: 925px) {
+  .decrypt-container {
+    height: 40vh;
+  }
+}
+
+ @media (max-width: 768px) {
+  .decrypt-container {
+    max-width: 800px;
+    height: 45vh;
+    margin-left: 0%;
+  } 
+}
+
+@media (max-width: 550px) {
+  .decrypt-container {
+    height: 50vh;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+}

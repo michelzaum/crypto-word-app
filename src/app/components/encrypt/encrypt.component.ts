@@ -38,7 +38,7 @@ export class EncryptComponent implements OnInit {
       return;
     };
 
-    const text = this.encryptService.encryption(this.textToEncrypt);
+    const text = this.encryptService.encryption(this.textToEncrypt.toLowerCase());
     this.data.push({ textResult: text, count: this.data.length });
     
     this.textToEncrypt = "";

@@ -10,7 +10,6 @@
 
 h1 {
   text-align: center;
-  margin-top: 2rem;
 }
 
 .encrypt-form {
@@ -81,7 +80,7 @@ h1 {
  
  @media (max-width: 550px) {
    .encrypt-container {
-     height: 45vh;
+     height: 50vh;
      width: 100%;
      margin-top: 1rem;
      padding: 0 0.5rem;

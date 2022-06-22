@@ -30,6 +30,12 @@ export class EncryptComponent implements OnInit {
 
     input?.addEventListener('keyup', () => {
         this.countCharacters = this.inputMaxLength - this.textToEncrypt.length;
+
+        if (this.textToEncrypt.length > this.inputMaxLength) {
+          input.classList.add('danger');
+        } else {
+          input.classList.remove('danger');
+        };
     });
   };
 

@@ -45,6 +45,7 @@ html {
 @media (max-width: 550px) {
   .encrypt-component, .decrypt-component {
     height: 80vh;
+    min-height: 500px;
     width: 100%;
     padding: 0 1rem;
   }

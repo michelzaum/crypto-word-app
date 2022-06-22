@@ -34,6 +34,10 @@ h1 {
   font-size: 1rem;
 }
 
+.danger {
+  border: 1px solid #ee6666;
+}
+
 .txt-aux {
   font-size: 0.9rem;
   font-weight: 600;
@@ -80,7 +84,8 @@ h1 {
 
 @media (max-width: 550px) {
   .decrypt-container {
-    height: 50vh;
+    height: 45vh;
+    /* min-height: 400px; */
     width: 100%;
     padding: 0 0.5rem;
   }

@@ -30,8 +30,14 @@ export class DecryptComponent implements OnInit {
 
     input?.addEventListener('keyup', () => {
         this.countCharacters = this.inputMaxLength - this.textToDecrypt.length;
+
+        if (this.textToDecrypt.length > this.inputMaxLength) {
+          input.classList.add('danger');
+        } else {
+          input.classList.remove('danger');
+        };
     });
-  }
+  };
 
   decrypt() {
     if (!isValidValue(this.textToDecrypt)) {

@@ -21,7 +21,7 @@ html {
 }
 
 .results {
-  margin-top: min(2rem);
+  margin-top: min(16px);
 }
 
 @media (max-width: 925px) {

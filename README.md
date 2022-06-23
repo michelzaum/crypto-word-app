@@ -1,5 +1,7 @@
 <h1 align="center">Crypto word app 🚀️</h1>
 
+<img align="center" src="./demonstration.gif" alt="Application demo" />
+
 ## About 💡️
 - This project is an application that you can use to encrypt words. The encryption happens using a merge of the concepts of [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) and [Polyalphabetic cipher](https://en.wikipedia.org/wiki/Polyalphabetic_cipher#:~:text=A%20polyalphabetic%20cipher%20is%20any,is%20a%20simplified%20special%20case.), which basically consist of encrypting words with characters substitutions.
 

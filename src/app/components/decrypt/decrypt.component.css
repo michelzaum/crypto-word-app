@@ -5,6 +5,8 @@
   max-width: 600px;
   margin-left: 4rem;
   height: 40vh;
+  min-height: 300px;
+  margin-bottom: min(24px);
   padding: 2rem;
 }
 
@@ -85,8 +87,13 @@ h1 {
 @media (max-width: 550px) {
   .decrypt-container {
     height: 45vh;
-    /* min-height: 400px; */
     width: 100%;
     padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .decrypt-form {
+    min-height: 80%;
   }
 }

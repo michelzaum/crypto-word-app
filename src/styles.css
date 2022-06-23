@@ -20,10 +20,6 @@ html {
   height: 100vh;
 }
 
-.results {
-  margin-top: min(16px);
-}
-
 @media (max-width: 925px) {
   .main-components {
     flex-direction: column;

@@ -5,6 +5,8 @@
   max-width: 600px;
   margin-left: 4rem;
   height: 40vh;
+  min-height: 300px;
+  margin-bottom: min(24px);
   padding: 2rem;
 }
 

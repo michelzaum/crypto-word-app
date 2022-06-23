@@ -89,6 +89,7 @@ h1 {
    .encrypt-container {
      height: 45vh;
      width: 100%;
+     min-width: 300px;
      margin-top: 1rem;
      padding: 0 0.5rem;
    }

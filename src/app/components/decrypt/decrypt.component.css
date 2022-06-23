@@ -89,6 +89,7 @@ h1 {
   .decrypt-container {
     height: 45vh;
     width: 100%;
+    min-width: 300px;
     padding: 0 0.5rem;
   }
 }
